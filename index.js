@@ -1,11 +1,25 @@
 const express = require('express')
+const helmet = require('helmet')
+const cors = require('cors')
+
 const app = express()
-const port = 3000
+
+const PORT = 3000
+
+app.use(helmet())
+app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  const result = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+  console.log(req.ip);
+
+  res.json({
+    result: result,
+    ip: req.ip
+  })
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })

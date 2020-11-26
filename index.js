@@ -9,6 +9,8 @@ const PORT = 3000
 app.use(helmet())
 app.use(cors())
 
+app.get('/ping', (req, res) => res.json({msg: 'success'}))
+
 app.get('/', (req, res) => {
   const result = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 

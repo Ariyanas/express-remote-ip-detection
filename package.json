@@ -1,0 +1,23 @@
+{
+  "name": "express-remote-ip-detection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariyanas/express-remote-ip-detection.git"
+  },
+  "author": "Arunabh Saikia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ariyanas/express-remote-ip-detection/issues"
+  },
+  "homepage": "https://github.com/Ariyanas/express-remote-ip-detection#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
